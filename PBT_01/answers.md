@@ -64,6 +64,70 @@ PHẦN A: Kiểm tra đọc hiểu
     - Những người khiếm thị hoặc những người truy cập website bằng DTDD hay PDA sẽ không được hiển thị đúng
 
 PHẦN B — THỰC HÀNH CODE
+    Bài B1 — Trang Profile cá nhân
+    Bài B2 — Trang Sản phẩm E-Commerce
+    Bài B3 — Debug HTML
+<!DOCTYPE>
+<html>
+<head>
+    <title>Trang web
+    <meta charset="utf8">
+</head>
+<body>
+    <h1>Welcome to ShopTLU<h1>
     
+    <header>
+        <nav>
+            <a href="home">Trang chủ<a>
+            <a href="products">Sản phẩm</a>
+        </nav>
+    </header>
+    
+    <main>
+        <section>
+            <h3>Sản phẩm hot</h3>
+            <img src=iphone.jpg>
+            <p>iPhone 16 Pro</p>
+            <p>Giá: <b>25.990.000đ</p></b>
+        </section>
+        
+        <section>
+            <h3>Thông tin</h3>
+            <table>
+                <tr>
+                    <td>Tên</td>
+                    <td>Giá</td>
+                </tr>
+                <tr>
+                    <td>iPhone</td>
+                    <td>25tr</td>
+                </tr>
+            </table>
+        </section>
+    </main>
+    
+    <main>
+        <p>Sidebar content</p>
+    </main>
+    
+    <footer>
+        <p>Copyright 2026
+    </footer>
+</body>  
 
+
+    Lỗi 1: Dòng 70 - Sai DOCTYPE - thêm html trong <!DOCTYPE>
+    Lỗi 2: Dòng 71 - Thiếu lang - Thêm lang ="vi" trong <html>
+    Lỗi 3: Dòng 73 - Thiếu thẻ đóng title - thêm </title>
+    Lỗi 4: Dòng 74 - Khai báo bộ mã kí tự trong meta charset sai - sửa "utf8" -> "UTF-8"
+    Lỗi 5: Dòng 77 - Sai thẻ đóng h1 - sửa thẻ đóng thành </h1>
+    Lỗi 6: Dòng 81 - Sai thẻ đóng và link không đúng - sửa "home" -> "#home" và <a> -> </a>
+    Lỗi 7: Dòng 82 - Link không đúng - sửa "products" -> "#products"
+    Lỗi 8: Dòng 89 - Sai cú pháp trong thẻ img và thiếu alt để mô tả ảnh - cho ảnh vào trong " " và thêm alt "mô tả"
+    Lỗi 9: Dòng 91 - Sai thứ tự đóng thẻ - thẻ đóng </b> phải trước </p>
+    Lỗi 10: Dòng 96 - Sai semantic, table không có thead và tbody - thêm 2 thẻ <thead></thead> và <tbody></tbody>
+    Lỗi 11: Dòng 98 - Dùng td cho header - sửa lại thành <th> tương tự dòng 99
+    Lỗi 12: Dòng 109 - Dùng thừa sai 1 thẻ main - sửa thành aside
+    Lỗi 13: Dòng 114 - Thiếu thẻ đóng p - thêm </p>
+    Lỗi 14: Dòng 117 - thiếu thẻ đóng html - thêm </html>
 
