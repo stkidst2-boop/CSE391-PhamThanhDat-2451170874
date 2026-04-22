@@ -131,3 +131,22 @@ PHẦN B — THỰC HÀNH CODE
     Lỗi 13: Dòng 114 - Thiếu thẻ đóng p - thêm </p>
     Lỗi 14: Dòng 117 - thiếu thẻ đóng html - thêm </html>
 
+    Bài B4 - Phân tích trang web thật
+    1. 3 thẻ semantic html5 mà trang đó dùng là:
+        - thẻ header ở đầu trang
+        - thẻ h1 trong body
+        - thẻ footer ở cuối trang
+       Thẻ không dùng đúng semantic:
+        - dùng <div class="body-home"> thay vì <main>
+    2. Tại trang chủ web không có <table> mà chỉ có ở trong sản phẩm chi tiết
+        - Table đó không hiện nội dung gì
+        - Có dùng <tbody> nhưng không dùng <thead>
+    3. Form đó có:
+        -action = "/tim-kiem"
+        -method không khai báo
+        Input types được dùng :
+        - input type="text"
+        - button type="submit"
+    
+    PHẦN C — SUY LUẬN
+    
