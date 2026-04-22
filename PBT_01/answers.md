@@ -149,4 +149,119 @@ PHẦN B — THỰC HÀNH CODE
         - button type="submit"
     
     PHẦN C — SUY LUẬN
-    
+    Câu C1: 
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop Demo</title>
+</head>
+<body>
+    <header> <!--Vì đây là đầu trang-->
+        <nav aria-label="Main navigation"> <!--vì đây là điều hướng chính-->
+            <ul> <!-- ul vì danh sách menu không có thứ tự -->
+                <li><a href="/">Trang chủ</a></li>
+                <li><a href="/dien-thoai">Điện thoại</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main> <!--main chứa toàn bộ nội dung chính-->
+        <nav aria-label="breadcrumb"> <!--nav vì đây là điều hướng-->
+            <ol> <!--ol vì breadcrumb có thứ tự cấp bậc-->
+                <li><a href="/">Trang chủ</a></li>
+                <li><a href="/dien-thoai">Điện thoại</a></li>
+                <li aria-current="page">Xiaomi 17</li> <!--trang hiện tại-->
+            </ol>
+        </nav>
+
+        <section> <!--Vì đây là một nhóm nội dung-->
+            <h2>Xiaomi 17</h2>
+            <figure> <!--Ảnh chính-->
+                <img src="https://placehold.co/200x300" alt="Ảnh sản phẩm chính">
+                <figcaption>Ảnh sản phẩm chính</figcaption>
+            </figure>
+
+            <div> <!--để chứa các ảnh phụ-->
+                <img src="https://placehold.co/150x200" alt="Ảnh sản phẩm 1">
+                <img src="https://placehold.co/150x200" alt="Ảnh sản phẩm 2">
+                <img src="https://placehold.co/150x200" alt="Ảnh sản phẩm 3">
+                <img src="https://placehold.co/150x200" alt="Ảnh sản phẩm 4">
+            </div>
+        </section>
+
+        <section> <!--vì đây là nhóm thông tin sản phẩm-->
+            <h1>Sản phẩm chi tiết</h1> <!-- h1 vì là tiêu đề chính của trang -->
+            <p>Giá: <strong>...</strong></p> <!--strong để nhấn mạnh giá-->
+
+            <div>
+                <span>★★★★☆</span> <!--Vì nội dung inline-->
+            </div>
+
+            <section>
+                <h2>Mô tả sản phẩm</h2>
+                <p>Chi tiết mô tả sản phẩm...</p>
+            </section>
+        </section>
+
+        <section>
+            <h2>Thông số kỹ thuật</h2>
+            <table> <!--vì đây là mô tả thông số dạng bảng-->
+                <thead> <!--phần tiêu đề bảng-->
+                    <tr>
+                        <th>Thông số</th>
+                    </tr>
+                </thead>
+                <tbody> <!--phần nội dung-->
+                    <tr>
+                        <th>Màn hình</th>
+                        <td>...</td>
+                    </tr>
+                    <tr>
+                        <th>Pin</th>
+                        <td>...</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <h2>Đánh giá</h2>
+            <article> <!--Mỗi đánh giá là 1 article độc lập-->
+                <h3>Người dùng A</h3>
+                <p>Sản phẩm rất tốt</p>
+            </article>
+
+            <article>
+                <h3>Người dùng B</h3>
+                <p>Chất lượng ổn</p>
+            </article>
+        </section>
+
+    </main>
+
+    <aside> <!--Sidebar: Sản phẩm tương tự-->
+        <h2>Sản phẩm tương tự</h2>
+        <article>
+            <h3><a href="#">Vivo X300 Ultra</a></h3> <!--Dẫn tới sản phẩm khác-->
+        </article>
+
+        <article>
+            <h3><a href="#">Samsung Galaxy S24 Ultra</a></h3>
+        </article>
+    </aside>
+
+    <footer> <!--Chân trang-->
+        <p>©Copyright</p> <!--Thông tin bản quyền, liên hệ...-->
+    </footer>
+</body>
+</html>
+
+    Câu C2:
+        Việc chỉ dùng <div> cho mọi thứ rồi thêm class không phải lựa chọn hoàn hảo mà nó còn gây ra 1 số hệ quả về mặt kĩ thuật ví dụ như:
+        Về Seo, các công cụ tìm kiếm như Google ưu tiên nội dung được đánh dấu bằng thẻ semantic, <header>, <nav>, <article>, <footer> giúp bot hiểu rõ cấu trúc trang, từ đó lập chỉ mục chính xác hơn. Nếu chỉ dùng <div>, công cụ tìm kiếm khó phân biệt đâu là nội dung chính, đâu là menu, dẫn đến kết quả SEO kém
+        Về Accessibility, những người khiếm thị cần sử dụng trình đọc màn hình dựa vào các thẻ như <nav>, <main>, <header> để định hướng trang web. Nếu tất cả chỉ là <div>, họ sẽ gặp khó khăn trong việc hiểu bố cục và truy cập thông tin
+        VD cụ thể semantic HTML giúp ích: Một bài viết blog dùng <article> và <section> sẽ được Google hiển thị rõ ràng trong kết quả tìm kiếm với tiêu đề, đoạn mô tả, thậm chí cả breadcrumb. Nếu chỉ dùng <div>, bài viết đó có thể bị coi như một khối nội dung chung, không nổi bật.
+        Trường hợp thực tế mà <div> vẫn phù hợp: Khi cần tạo container thuần layout như chia grid, flex, wrapper để nhóm các phần tử mà không mang ý nghĩa ngữ nghĩa
+        
