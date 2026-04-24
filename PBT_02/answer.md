@@ -46,3 +46,7 @@ PHẦN A — KIỂM TRA ĐỌC HIỂU
                     <img src="jean.jpg" alt="Quần jean nam">
                     <figcaption>Quần Jean nam trắng, Giá 179.000đ </figcaption>
                 </figure>
+
+PHẦN B — THỰC HÀNH CODE
+Bài B1 — Form Đăng ký Tài khoản
+    Giải thích trong answers.md tại sao HTML không thể validate confirm password: HTML chỉ validate từng field riêng lẻ, không thể so sánh giá trị giữa các input. Vì vậy, việc kiểm tra confirm password phải dùng JavaScript hoặc backend.

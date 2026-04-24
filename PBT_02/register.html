@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop TLu</title>
+</head>
+<body>
+    <h1>Đăng kí tài khoản</h1>
+    <form action="#" method="POST">
+        <fieldset>
+            <legend>Thông tin cá nhân</legend>
+            <label for="fullname">Họ và tên:</label>
+            <input type="text" id="fullname" required minlength="2" maxlength="50" placeholder="Phạm Thành Đạt">
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" required placeholder="dat@gmail.com">
+            
+            <label for="tel">Số điện thoại:</label>
+            <input type="tel" id="tel" pattern="(0[389])+(0-9{})" placeholder="0312345678">
+            
+            <label for="dob">Ngày sinh:</label>
+            <input type="date" id="dob" max="" placeholder="02/12/2006"> 
+        </fieldset>
+
+        <fieldset>
+            <legend>Tài khoản</legend>
+            <label for="Username">Username: </label>
+            <input type="text" id="Username" pattern="^[a-zA-Z0-9_]{3,20}$" placeholder="Dat06">
+
+            <label for="Password">Password:</label>
+            <input type="password" id="Password" minlength="8" pattern="^(?=.*[A-Z])(?=.*[0-9])$" placeholder="Dat21206">
+
+            <label for="confirm">Xác nhận Password</label>
+            <input type="password" id="confirm" minlength="8" pattern="^(?=.*[A-Z])(?=.*[0-9])$" placeholder="Dat21206">
+        </fieldset>
+
+        <fieldset>
+            <legend>Thông tin giao hàng</legend>
+            <label for="city">Thành phố</label>
+            <select id="city">
+                <option value="">-- Chọn thành phố --</option>
+                <option value="hanoi">Hà Nội</option>
+                <option value="thaibinh">Thái Bình</option>
+                <option value="namdinh">Nam Định</option>
+                <option value="quangninh">Quảng Ninh</option>
+                <option value="haiduong">Hải Dương</option>
+            </select>
+
+            <label for="district">Quận/Huyện</label>
+            <select id="district">
+            </select>
+            
+            <label for="address">Địa chỉ chi tiết</label>
+            <textarea id="address" rows="3" placeholder="Số nhà, đường, phường/xã,..."></textarea>
+
+            <p>Giới tính:</p>
+            <label for="male">Nam</label>
+            <input type="radio" id="male" name="gender" >
+
+            <label for="female">Nữ</label>
+            <input type="radio" id="female" name="gender">
+
+            <label for="other">Khác</label>
+            <input type="radio" id="other" name="gender">
+            
+            <label>
+                <input type="checkbox" required>
+                Tôi đồng ý với <a href="terms.html" target="_blank" rel="noopener">Điều khoản sử dụng</a>
+            </label>
+
+            <button type="submit" id="submitBtn">Đăng ký</button>
+            <button type="reset">Xóa</button>
+        </fieldset>
+    </form>
+    
+</body>
+</html>
