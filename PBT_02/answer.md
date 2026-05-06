@@ -50,3 +50,27 @@ PHẦN A — KIỂM TRA ĐỌC HIỂU
 PHẦN B — THỰC HÀNH CODE
 Bài B1 — Form Đăng ký Tài khoản
     Giải thích trong answers.md tại sao HTML không thể validate confirm password: HTML chỉ validate từng field riêng lẻ, không thể so sánh giá trị giữa các input. Vì vậy, việc kiểm tra confirm password phải dùng JavaScript hoặc backend.
+
+PHẦN C — PHÂN TÍCH & SUY LUẬN 
+Câu C1:
+    <form>
+        Tên: <input type="text">
+        
+        <input type="email" placeholder="Email của bạn">
+        
+        <input type="password" placeholder="Mật khẩu">
+        <input type="password" placeholder="Nhập lại mật khẩu">
+        
+        Phone: <input type="text" value="0901234567">
+        
+        <select>
+            <option>Hà Nội</option>
+            <option>TP.HCM</option>
+        </select>
+        
+        <label>
+            Tôi đồng ý điều khoản
+        </label>
+        
+        <input type="submit" value="Gửi">
+    </form>
