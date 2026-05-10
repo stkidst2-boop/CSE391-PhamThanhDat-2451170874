@@ -36,3 +36,30 @@ PHẦN A — KIỂM TRA ĐỌC HIỂU
         6. article > p                  -> Chọn: 25.990.000đ, Mô tả sản phẩm..., 45.990.000đ, Mô tả sản phẩm...
         7. a[href="/"]                  -> Chọn: Home
         8. .top-bar.dark h1             -> Chọn: ShopTLU   
+    
+    Câu A3 - Box Model — Tính toán kích thước
+        *Trường hợp 1:
+            Chiều rộng hiển thị: 450px
+            không gian chiếm trên trang: 470px
+        *Trường hợp 2:
+            Chiều rộng hiển thị: 400px
+            Kích thước content thực tế: 350px
+            Không gian chiến trên trang: 420px
+        *Trường hợp 3:
+            Khoảng cách giữa box-a và box-b = 40px
+            Vì Margin dọc giữa 2 block element gộp lại và lấy cái lớn hơn
+        Nâng cao: Nếu .box-a có margin-bottom: -10px và .box-b có margin-top: 40px, khoảng cách = 30px
+
+    Câu A4 — Specificity (Độ ưu tiên)
+    1. Tính specificity score cho mỗi rule
+        rule A: 0,0,1
+        rule B: 0,1,0
+        rule C: 1,0,0
+        rule D: 0,1,1
+    2. Element có màu đỏ 
+    3. Nếu thêm <p class="price" id="main-price" style="color: orange;">, element có màu cam
+    4. Nếu Rule A thêm !important, element có màu đen vì nó có thứ tự ưu tiên hơn những cái còn lại
+
+PHẦN B — THỰC HÀNH CODE
+    Bài B1 — Style trang Profile
+    
