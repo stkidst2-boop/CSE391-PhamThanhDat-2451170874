@@ -1,0 +1,32 @@
+body{
+    font-family: 'Times New Roman', Times, serif;
+    padding: 30px;
+}
+
+.box{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 30px;
+    justify-self: center;
+}
+
+h3{
+    text-align: center;
+}
+
+.content-box{
+    width: 300px;
+    padding: 20px;
+    box-sizing: content-box;
+    border: 5px solid black;
+}
+
+.border-box{
+    width: 300px;
+    padding: 20px;
+    box-sizing: border-box;
+    border: 5px solid black;
+}
+
+

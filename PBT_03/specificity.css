@@ -1,0 +1,39 @@
+p{
+    color: aqua;
+}
+
+body p{
+    color: bisque;
+}
+
+.text{
+    color: blue;
+}
+
+p.text{
+    color: blueviolet;
+}
+
+p.text.hightlight{
+    color: yellow;
+}
+
+.text.hightlight{
+    color: brown;
+}
+
+#demo{
+    color:chartreuse
+}
+
+p#demo{
+    color: chocolate;
+}
+
+#demo.text{
+    color: darkgoldenrod;
+}
+
+p#demo.text.hightlight{
+    color:green;
+}

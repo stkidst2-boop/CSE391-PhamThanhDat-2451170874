@@ -62,4 +62,27 @@ PHẦN A — KIỂM TRA ĐỌC HIỂU
 
 PHẦN B — THỰC HÀNH CODE
     Bài B1 — Style trang Profile
+    Bài B2 - Box Model Lab
+        Phần 1:
+            Hộp 1 (content-box): chiều rộng thực tế = 349,6px (đo từ DevTools)
+            Hộp 2 (border-box): chiều rộng thực tế = 300px (đo từ DevTools)
+            Giải thích sự khác biệt:
+                + content-box: tính chiều rộng thực tế bằng width (300px) + padding mỗi bên (20px + 20px) + border mỗi bên       
+                  (4,8px + 4,8px) 
+                + border-box: chiều rộng thực tế width đã bao gồm content, padding, border
+        Phần 2: 
+    Bài 3 - Specificity battle
+    1.  + 1tag; score:001
+        + 2 tag; score:002
+        + 1 class; score: 010
+        + 1 class 1tag; score: 011
+        + 2 class 1tag; score: 021
+        + 2 class; score: 020
+        + 1 ID; score: 100
+        + 1 ID 1 tag; score: 101
+        + 1 ID 1 class; score: 110
+        + 1 ID 2 class 1 tag; score: 121
+    2. Elements cuối cùng hiển thị màu xanh lá vì nó có điểm specificity cao nhất
+    3. Ảnh
+    4.Thay đổi thứ tự rules trong CSS file, kết quả không đổi vì nó tính theo điểm specificity cao nhất
     
