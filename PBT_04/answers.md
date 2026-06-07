@@ -34,7 +34,7 @@ PHẦN B - THỰC HÀNH CODE
 PHẦN C - SUY LUẬN
     Câu C1 — Flexbox vs Grid: Khi nào dùng gì?
     1. Dùng Flexbox, vì thanh điều hướng là bố cục trục ngang, có lợi thế mạnh trong việc căn chỉnh các phần tử theo hàng và phân bổ khoảng cách
-    2. Dùng Grid, vì Đây là bố cục hai chiều (cả hàng và cột) dạng lưới hoàn,khi dùng Grid chỉ cần thiết lập grid-template-columns: repeat(3, 1fr);. Khi có ảnh mới được thêm vào, Grid sẽ tự động đẩy chúng xuống hàng tiếp theo và căn thẳng hàng với các ảnh phía trên mà không cần tính toán phần trăm width hay margin phức tạp như Flexbox.
-    3. Dùng Grid, vì nó giúp định hình cấu trúc lớn của trang web rất rõ ràng với grid-template-columns: 1fr 300px và giữ cho cấu trúc trang ổn định ngay cả khi nội dung bên trong thay đổi.
-    4. Kết hợp cả hai, vì dùng Grid cho phần cha của Footer để chia đều thành 4 cột (repeat(4, 1fr)) một cách nhanh chóng và chính xác. Dùng Flexbox (flex-direction: column) cho các liên kết bên trong từng cột để xếp chúng theo chiều dọc và dễ dàng căn chỉnh khoảng cách giữa các dòng text.
-    5. Dùng Flexbox, vì bố cục chỉ theo một chiều dọc, margin-top: auto đẩy nút xuống cuối card rất dễ. Code ngắn gọn và đúng mục đích của Flexbox.
+    2. Dùng Grid, vì Đây là bố cục hai chiều (cả hàng và cột) dạng lưới hoàn,khi dùng Grid chỉ cần thiết lập grid-template-columns: repeat(3, 1fr);. Khi có ảnh mới được thêm vào, Grid sẽ tự động đẩy chúng xuống hàng tiếp theo và căn thẳng hàng với các ảnh phía trên mà không cần tính toán phần trăm width hay margin phức tạp như Flexbox
+    3. Dùng Grid, vì nó giúp định hình cấu trúc lớn của trang web rất rõ ràng với grid-template-columns: 1fr 300px và giữ cho cấu trúc trang ổn định ngay cả khi nội dung bên trong thay đổi
+    4. Kết hợp cả hai, vì dùng Grid cho phần cha của Footer để chia đều thành 4 cột (repeat(4, 1fr)) một cách nhanh chóng và chính xác. Dùng Flexbox (flex-direction: column) cho các liên kết bên trong từng cột để xếp chúng theo chiều dọc và dễ dàng căn chỉnh khoảng cách giữa các dòng text
+    5. Dùng Flexbox, vì bố cục chỉ theo một chiều dọc, margin-top: auto đẩy nút xuống cuối card rất dễ. Code ngắn gọn và đúng mục đích của Flexbox
