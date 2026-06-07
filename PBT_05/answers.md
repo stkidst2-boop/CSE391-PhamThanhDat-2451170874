@@ -123,3 +123,161 @@ PHẦN A - ĐỌC HIỂU
 PHẦN B - THỰC HÀNH CODE
     Bài B3:
     Lệnh compile SCSS -> CSS: sass scss/style.scss css/style.css
+
+PHẦN C - SUY LUẬN
+    Câu C1:   
+    Navigation thay đổi:
+        Mobile: nav ẩn, chỉ còn hamburger hiện
+        Tablet/desktop: hamburger ẩn, nav hiện dưới dạng flex ngang
+        Nói cách khác là menu chuyển từ dạng “ẩn/hamburger” trên mobile sang “hiện ngay” trên màn hình lớn
+    Lưới content thay đổi:
+        Mobile mặc định: 1 cột
+        Tablet: 2 cột
+        Desktop: 4 cột
+    Elements bị ẩn trên mobile: .nav, .sidebar, .ads 
+    Font size có thay đổi
+
+    Câu C2: 
+    Mobile: sidebar bị ẩn, Form đặt bàn nằm dưới ảnh món ăn
+                ┌─────────────────────┐
+                │ LOGO          ☰    |
+                │ Hotline             │
+                ├─────────────────────┤
+                │                     │
+                │     HERO IMAGE      │
+                │                     │
+                ├─────────────────────┤
+                │      Dish 1         │
+                ├─────────────────────┤
+                │      Dish 2         │
+                ├─────────────────────┤
+                │      Dish 3         │
+                ├─────────────────────┤
+                │      Dish 4         │
+                ├─────────────────────┤
+                │      Dish 5         │
+                ├─────────────────────┤
+                │      Dish 6         │
+                ├─────────────────────┤
+                │    BOOKING FORM     │
+                │  Date               │
+                │  Time               │
+                │  Guests             │
+                │  Notes              │
+                ├─────────────────────┤
+                │     GOOGLE MAP      │
+                ├─────────────────────┤
+                │       FOOTER        │
+                └─────────────────────┘
+   
+    Tablet: Grid ảnh 2 cột × 3 hàng, bản đồ nằm dưới form
+    ┌─────────────────────────────────┐
+    │ LOGO               Hotline      │
+    ├─────────────────────────────────┤
+    │                                 │
+    │           HERO IMAGE            │
+    │                                 │
+    ├──────────────┬──────────────────┤
+    │   Dish 1     │    Dish 2        │
+    ├──────────────┼──────────────────┤
+    │   Dish 3     │    Dish 4        │
+    ├──────────────┼──────────────────┤
+    │   Dish 5     │    Dish 6        │
+    ├─────────────────────────────────┤
+    │          BOOKING FORM           │
+    ├─────────────────────────────────┤
+    │          GOOGLE MAP             │
+    ├─────────────────────────────────┤
+    │            FOOTER               │
+    └─────────────────────────────────┘
+
+    Desktop: Layout 2 cột, Không cần sidebar riêng
+    ┌──────────────────────────────────────────────┐
+    │ LOGO                            Hotline      │
+    ├──────────────────────────────────────────────┤
+    │                                              │
+    │                HERO IMAGE                    │
+    │                                              │
+    ├───────────────────┬──────────────────────────┤
+    │                   │                          │
+    │   Dish Gallery    │      Booking Form        │
+    │                   │                          │
+    │ ┌───┬───┬───┐     │  Date                    │
+    │ │1  │2  │3  │     │  Time                    │
+    │ ├───┼───┼───┤     │  Guests                  │
+    │ │4  │5  │6  │     │  Notes                   │
+    │ └───┴───┴───┘     │                          │
+    │                   │                          │
+    ├───────────────────┴──────────────────────────┤
+    │               GOOGLE MAP                     │
+    ├──────────────────────────────────────────────┤
+    │                  FOOTER                      │
+    └──────────────────────────────────────────────┘
+
+    CSS skeleton:
+    *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    }
+
+    body{
+        display:grid;
+        grid-template-areas:
+            "header"
+            "hero"
+            "gallery"
+            "booking"
+            "map"
+            "footer";
+    }
+
+    header{
+        grid-area:header;
+    }
+
+    .hero{
+        grid-area:hero;
+    }
+
+    .gallery{
+        grid-area:gallery;
+        display:grid;
+        grid-template-columns:1fr;
+        gap:15px;
+    }
+
+    .booking{
+        grid-area:booking;
+    }
+
+    .map{
+        grid-area:map;
+    }
+
+    footer{
+        grid-area:footer;
+    }
+
+    @media (min-width:768px){
+        .gallery{
+            grid-template-columns:
+                repeat(2,1fr);
+        }
+    }
+
+    @media (min-width:1024px){
+        .main-layout{
+            display:grid;
+            grid-template-columns:
+                2fr 1fr;
+            gap:20px;
+        }
+
+        .gallery{
+            grid-template-columns:
+                repeat(3,1fr);
+        }
+    }
+
+    
