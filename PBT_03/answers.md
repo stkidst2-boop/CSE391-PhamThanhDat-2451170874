@@ -86,3 +86,29 @@ PHẦN B — THỰC HÀNH CODE
     3. Ảnh
     4.Thay đổi thứ tự rules trong CSS file, kết quả không đổi vì nó tính theo điểm specificity cao nhất
     
+PHẦN C - DEBUG & SUY LUẬN
+    Câu C1: 
+    1. Chiều rộng thực tế của sidebar là: 300+20+20+1+1=342px
+                                   content là: 660+30+30+1+1=722px
+    2. Layout bị vỡ vì tổng chiều rộng của sidebar và content là 342+722=1064px trong khi container là 960px nhỏ hơn => content bị đẩy xuống dưới sidebar
+    3. 2 cách sửa:
+      + Dùng border-box
+        .sidebar,
+        .content {
+            box-sizing: border-box;
+            float: left;
+        }
+      + Không dùng border-box: giảm chiều rộng của content
+        .content {
+            width: 556px;
+            padding: 30px;
+            border: 1px solid #ccc;
+            float: left;
+        }
+        Lúc này content có chiều rộng là 556+30+30+1+1=618px + 342px(sidebar) = 960px vừa khít với container
+
+    Câu C2:
+        1. "Sản phẩm A" (h2) có font-size = 20px và color = red
+        2. "Mô tả sản phẩm" (p trong card featured) có color = blue
+        3. "Sản phẩm B" (h2) có font-size = 20px và color = blue
+        4. "Mô tả sản phẩm B" (p.highlight) có color = green

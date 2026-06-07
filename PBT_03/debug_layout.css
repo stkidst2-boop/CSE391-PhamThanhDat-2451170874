@@ -1,0 +1,50 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 960px;
+    margin: 20px auto;
+    border: 1px solid black;
+    overflow: hidden;
+}
+
+.fix1 .sidebar,
+.fix1 .content {
+    float: left;
+    box-sizing: border-box;
+}
+
+.fix1 .sidebar {
+    width: 300px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background: lightblue;
+}
+
+.fix1 .content {
+    width: 660px;
+    padding: 30px;
+    border: 1px solid #100101;
+    background: lightgreen;
+}
+
+.fix2 .sidebar,
+.fix2 .content {
+    float: left;
+    box-sizing: content-box;
+}
+
+.fix2 .sidebar {
+    width: 300px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background: lightcoral;
+}
+
+.fix2 .content {
+    width: 556px;
+    padding: 30px;
+    border: 1px solid #ccc;
+    background: khaki;
+}
