@@ -13,7 +13,6 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     background: #222;
     padding: 15px 40px;
 }
@@ -52,23 +51,18 @@ body {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-
     max-width: 1200px;
     margin: 40px auto;
 }
 
 .card {
     flex: 0 0 calc(25% - 20px);
-
     display: flex;
     flex-direction: column;
-
     background: white;
     border-radius: 10px;
     overflow: hidden;
-
     padding: 15px;
-
     transition: 0.3s;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
@@ -95,7 +89,6 @@ body {
 
 .card button {
     margin-top: auto;
-
     padding: 10px;
     border: none;
     background: #007bff;
