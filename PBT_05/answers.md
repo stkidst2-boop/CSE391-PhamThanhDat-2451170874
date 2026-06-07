@@ -121,3 +121,5 @@ PHẦN A - ĐỌC HIỂU
         }
 
 PHẦN B - THỰC HÀNH CODE
+    Bài B3:
+    Lệnh compile SCSS -> CSS: sass scss/style.scss css/style.css

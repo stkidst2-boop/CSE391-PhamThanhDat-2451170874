@@ -1,0 +1,191 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $font-primary;
+    font-size: 14px;
+    background: $secondary-color;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: $primary-color;
+    color: $text-light;
+    padding: $spacing-md;
+
+    .logo {
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .hamburger {
+        font-size: 28px;
+        cursor: pointer;
+    }
+
+    .nav {
+        display: none;
+
+        a {
+            color: $text-light;
+            text-decoration: none;
+        }
+    }
+}
+
+.sidebar,
+.ads {
+    display: none;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: $spacing-md;
+    padding: $spacing-md;
+}
+
+.card {
+    background: $card-bg;
+    border-radius: $border-radius;
+    overflow: hidden;
+
+    @include card-shadow;
+
+    .card-image {
+        max-width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .card-title {
+        padding: 10px;
+        font-size: 18px;
+    }
+
+    p {
+        padding: 0 10px 15px;
+    }
+
+    &:hover {
+        transform: translateY(-5px);
+        transition: 0.3s;
+    }
+
+    &.featured {
+        border: 2px solid gold;
+    }
+}
+
+.footer {
+    background: $primary-color;
+    color: $text-light;
+    text-align: center;
+    padding: 20px;
+}
+
+@include respond-to(tablet) {
+
+    body {
+        font-size: 16px;
+    }
+
+    .header {
+
+        .hamburger {
+            display: none;
+        }
+
+        .nav {
+            display: flex;
+            gap: 20px;
+        }
+    }
+
+    .sidebar {
+        @include flex-center;
+        gap: 20px;
+        background: $card-bg;
+        padding: 15px;
+        margin: 15px;
+
+        h3 {
+            margin-right: 20px;
+        }
+    }
+
+    .products {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .card {
+        .card-title {
+            font-size: 20px;
+        }
+    }
+}
+
+@include respond-to(desktop) {
+
+    body {
+        font-size: 18px;
+        display: grid;
+        grid-template-columns:
+            $sidebar-width 1fr $sidebar-width;
+
+        grid-template-areas:
+            "header header header"
+            "sidebar products ads"
+            "footer footer footer";
+    }
+
+    .header {
+        grid-area: header;
+    }
+
+    .sidebar {
+        grid-area: sidebar;
+        display: block;
+        margin: 15px;
+
+        label {
+            display: block;
+            margin: 10px 0;
+        }
+    }
+
+    .products {
+        grid-area: products;
+        grid-template-columns:
+            repeat(4, 1fr);
+    }
+
+    .ads {
+        grid-area: ads;
+        display: block;
+        padding: 15px;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .footer {
+        grid-area: footer;
+    }
+
+    .card {
+        .card-title {
+            font-size: 22px;
+        }
+    }
+}
