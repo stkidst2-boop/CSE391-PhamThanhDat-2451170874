@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f4f4f4;
+    transition: .3s;
+}
+
+.dark-mode {
+    background: #1e1e1e;
+    color: white;
+}
+
+.container {
+    width: 1200px;
+    max-width: 95%;
+    margin: 20px auto;
+}
+
+.topbar {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+input,
+select,
+button {
+    padding: 10px;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: rgb(191, 201, 227);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    transition: .3s;
+}
+
+.dark-mode .card {
+    background: #333;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+}
+
+.card-body {
+    padding: 15px;
+}
+
+.price {
+    color: #e53935;
+    font-weight: bold;
+}
+
+.cart {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+}
+
+.badge {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background: red;
+    color: white;
+    border-radius: 50%;
+    width: 22px;
+    height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+}
+
+.modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, .5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: white;
+    width: 400px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.dark-mode .modal-content {
+    background: #333;
+}
