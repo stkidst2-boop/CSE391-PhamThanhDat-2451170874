@@ -25,8 +25,8 @@ PBT_09/
 ├──  video/                Thư mục chứa video quay lại quá trình hoạt động demo
 ├──  answers.md            Câu trả lời lí thuyết
 └──  README.md             Tài liệu hướng dẫn tổng quan
-
-##🔧 Hướng dẫn chạy
+```
+## 🔧 Hướng dẫn chạy
 
 Mỗi ứng dụng là một trang web tĩnh. Có thể mở trực tiếp file `index.html` trong thư mục ứng dụng bằng trình duyệt.
 
@@ -34,7 +34,7 @@ Nếu dùng máy chủ cục bộ (ví dụ `Live Server` trong VS Code), mở t
 
 ## Chi tiết từng ứng dụng
 
-### 1.📑 Form Validator (`form_validator/`)
+## 1.📑 Form Validator (`form_validator/`)
 
 - Tên trang: `Register Form`
 - Kiểm tra:
@@ -46,7 +46,7 @@ Nếu dùng máy chủ cục bộ (ví dụ `Live Server` trong VS Code), mở t
 - Nút `Register` chỉ bật khi toàn bộ trường hợp lệ.
 - Hiển thị modal xác nhận khi đăng ký thành công.
 
-### 2.⌨️ Keyboard App (`keyboard_app/`)
+## 2.⌨️ Keyboard App (`keyboard_app/`)
 
 - Tên trang: `Keyboard Navigation`
 - Thao tác:
@@ -57,7 +57,7 @@ Nếu dùng máy chủ cục bộ (ví dụ `Live Server` trong VS Code), mở t
   - `Esc` đóng Command Palette
 - Command Palette hỗ trợ tìm kiếm và thực thi lệnh như `Next Image`, `Previous Image`, `First Image`, `Last Image`, `Play Slideshow`, `Stop Slideshow`.
 
-### 3.🛒 Product Catalog (`product_catalog/`)
+## 3.🛒 Product Catalog (`product_catalog/`)
 
 - Thẻ sản phẩm được tạo động bằng JavaScript.
 - Tính năng:
@@ -68,7 +68,7 @@ Nếu dùng máy chủ cục bộ (ví dụ `Live Server` trong VS Code), mở t
   - Nút `Thêm giỏ` cập nhật số lượng giỏ hàng
   - Click vào sản phẩm mở modal chi tiết
 
-### 4.📋 Todo App (`todo_app/`)
+## 4.📋 Todo App (`todo_app/`)
 
 - Tạo, chỉnh sửa và xóa công việc
 - Đánh dấu hoàn thành bằng click vào nội dung công việc
@@ -76,7 +76,7 @@ Nếu dùng máy chủ cục bộ (ví dụ `Live Server` trong VS Code), mở t
 - Xóa tất cả công việc đã hoàn thành
 - Lưu trạng thái todo vào `localStorage` để giữ khi tải lại trang
 
-##✏️ Ghi chú
+## ✏️ Ghi chú
 - Dự án sử dụng JavaScript thuần, không cần build.
 - Mỗi ứng dụng gồm một `index.html`, `style.css` và `app.js`.
 - Thư mục `screenshots/` và `video/` hiện tại trống, có thể sử dụng để lưu tài liệu minh họa sau này.
