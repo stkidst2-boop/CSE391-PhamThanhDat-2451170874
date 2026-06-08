@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyboard App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Keyboard Navigation</h1>
+        <div class="gallery">
+            <img id="galleryImage" src="https://placehold.co/800x400?text=Image+1" alt="Gallery Image">
+
+            <div class="gallery-controls">
+                <button id="prevBtn" aria-label="Previous Image">← Prev</button>
+                <button id="nextBtn" aria-label="Next Image">Next →</button>
+            </div>
+            <p>Keyboard: ← → 1-9 Space</p>
+        </div>
+
+    </div>
+
+    <div id="commandPalette" class="overlay hidden">
+        <div class="palette-box">
+            <input id="commandInput" type="text" placeholder="Type a command..." aria-label="Command Search">
+            <ul id="commandList"></ul>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,77 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f4f4f4;
+    padding: 30px;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+}
+
+.gallery img {
+    width: 100%;
+    border-radius: 12px;
+}
+
+.gallery-controls {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+button,
+input {
+    padding: 10px;
+}
+
+button:focus,
+input:focus {
+    outline: 3px solid #1677ff;
+    outline-offset: 2px;
+}
+
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, .6);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 100px;
+}
+
+.hidden {
+    display: none;
+}
+
+.palette-box {
+    width: 500px;
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.palette-box input {
+    width: 100%;
+}
+
+#commandList {
+    margin-top: 10px;
+    list-style: none;
+}
+
+#commandList li {
+    padding: 10px;
+    cursor: pointer;
+}
+
+#commandList li:hover {
+    background: #eee;
+}
